@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     
     # my apps
     'claims',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

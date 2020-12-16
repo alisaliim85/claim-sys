@@ -3,68 +3,71 @@
 
 {% block body %}
 
-    <div class="row">
+<div class="row">
 
-        <div
-            class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+    <div
+        class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Status : {{claim_detail.status}}</h3><br>
+                <div>Attachment : {{claim_detail.image}}</div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class=" col-md-9 col-lg-9 ">
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>Claim No :</td>
+                                    <td>{{claim_detail.id}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Card No :</td>
+                                    <td>{{claim_detail.piqama}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Name :</td>
+                                    <td>{{claim_detail.name}}</td>
+                                </tr>
 
+                                <tr>
+                                <tr>
+                                    <td>Requested Amount :</td>
+                                    <td>{{claim_detail.ramount}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Currancy :</td>
+                                    <td>{{claim_detail.currency}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Note :</td>
+                                    <td>{{claim_detail.note}}</td>
+                                </tr>
+                                <td>Reuested Date :</td>
+                                <td>{{claim_detail.rdate}}<br>
+                                </td>
 
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Sheena Shrestha</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                      
+                                </tr>
 
+                            </tbody>
+                        </table>
 
-                        <div class=" col-md-9 col-lg-9 ">
-                            <table class="table table-user-information">
-                                <tbody>
-                                    <tr>
-                                        <td>Department:</td>
-                                        <td>{{id }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hire date:</td>
-                                        <td>06/23/2013</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Date of Birth</td>
-                                        <td>01/24/1988</td>
-                                    </tr>
-
-                                    <tr>
-                                    <tr>
-                                        <td>Gender</td>
-                                        <td>Female</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Home Address</td>
-                                        <td>Kathmandu,Nepal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td><a href="mailto:info@support.com">info@support.com</a></td>
-                                    </tr>
-                                    <td>Phone Number</td>
-                                    <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
-                                    </td>
-
-                                    </tr>
-
-                                </tbody>
-                            </table>
-
-                            <a href="#" class="btn btn-danger">Reject</a>
-                            <a href="#" class="btn btn-primary">Accept</a>
-                        </div>
+                        
                     </div>
                 </div>
-              
             </div>
+
         </div>
     </div>
+    <dev class="row">
+        <div class="col-12">
+        <a href="#" class="btn btn-danger">Reject</a>
+        <a href="#" class="btn btn-success">Accept</a>
+        <a href="#" class="btn btn-warning">More Information</a>
+        </div>
+
+    </dev>
+</div>
 
 
 

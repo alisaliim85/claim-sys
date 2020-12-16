@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block body %}
+<form action="NewClaim" method="post">
+    {% csrf_token %}
+    #{{ form|crispy }}
+    <!-- <div class="row">
+        <div class="col-6">
+            {{form.name|as_crispy_field}}
+        </div>
+        <div class="col-6">
+            {{ form.eiqama|as_crispy_field }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            {{form.piqama|as_crispy_field}}
+        </div>
+        <div class="col-6">
+            {{ form.name|as_crispy_field }}
+        </div>
+    </div> -->
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock body %}
