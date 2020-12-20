@@ -32,3 +32,12 @@ class Claim(models.Model):
 
     def __str__(self):
         return str(self.id) +' - '+ self.piqama
+
+
+
+class Post(models.Model):
+    message = models.TextField(max_length=1000)
+    claim = models.ForeignKey(Claim, on_delete=models.CASCADE)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField( auto_now=True, auto_now_add=False)
+    attachment = models.ImageField( upload_to=None, height_field=None, width_field=None, max_length=None,null = True , blank = True)

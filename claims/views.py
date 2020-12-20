@@ -13,7 +13,11 @@ def index(request):
 
 def details(request , id):
     claim_detail = Claim.objects.get(id=id)
-    context = {'claim_detail': claim_detail}
+    username = request.user.username
+
+    context = {'claim_detail': claim_detail,
+                'username': username
+                }
 
     return render(request,'claims\detail.html', context)
 
